@@ -1,4 +1,4 @@
-### Python Application to calculate search engine metrics from a sample file
+### Python Application to calculate search engine metrics.
 
 
 
@@ -7,7 +7,7 @@
 Make file is created to deploy the function easily in AWS as lambda function. Any dependencies should be specified in requirements.txt before the packge is deployed. 
 
 ```
-make create-function
+make create-app
 ```
 
 - Installs dependencies from requirements.txt 
@@ -15,7 +15,7 @@ make create-function
 - creates lambda function
 
 ```
-make update-function
+make update-app
 ```
 
 - Installs dependencies from requirements.txt 

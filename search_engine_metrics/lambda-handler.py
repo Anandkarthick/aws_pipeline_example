@@ -1,5 +1,5 @@
 import pandas as pd
+from parse_metrics import SearchEngine as se
 
-search_metrics = pd.read_csv('search_engine_metrics/data.tsv', sep='\t')
-
-print(search_metrics.head(5))
+def lambda_function(event, context):
+    print(event, context)

@@ -9,7 +9,7 @@ aws lambda create-function \
     	--function-name "search_engine_metrics" \
     	--runtime python3.9 \
     	--zip-file "fileb://deploy_archives/search_engine_metrics.zip" \
-    	--handler "lambda-handler" \
+    	--handler "lambda-handler.lambda_function" \
     	--role "${AWS_LAMBDA_ARN}" \
 		--timeout 900 \
 		--description "Python app to calculate search engine metrics"
