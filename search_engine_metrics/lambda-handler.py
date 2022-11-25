@@ -8,6 +8,7 @@ def lambda_function(event, context):
     path_to_file = sys.argv[1]
     metrics = se(path_to_file)
     metrics.get_domain().get_revenue().get_keywords()
+    print(f"Shape of dataframe after initial formatting, {metrics.data.shape}")
     # select columns
     final_df = metrics.data[['Search Engine Domain', 'Search Keyword', 'Revenue']]\
             .groupby(['Search Engine Domain', 'Search Keyword']).sum('Revenue')\
@@ -19,3 +20,6 @@ def lambda_function(event, context):
     derived_s3_path = "/".join(path_to_file.split("/")[2:-1])
     s3_key = f"s3://{derived_s3_path}/{file_name}"
     metrics.write_to_s3(final_df, s3_key, file_name)
+
+if __name__ == "__main__":
+    lambda_function(event="a", context="b")
