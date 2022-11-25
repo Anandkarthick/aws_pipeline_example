@@ -5,9 +5,9 @@ all:
 
 create-app:
 	@echo "Trying to create function : search engine metrics"
-	./environment_export.sh
-	./create_function.sh $(lambda_arn)
+	deploy/environment_export.sh
+	deploy/create_function.sh $(lambda_arn)
 
 update-app:
 	@echo "Trying to update function : search engine metrics"
-	./update_function.sh
+	deploy/update_function.sh

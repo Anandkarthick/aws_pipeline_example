@@ -69,3 +69,4 @@ make update-app
 - AWS wrangler is too large for lambda deployments
 - Issues with adding environment variables
 - Numpy - Python version conflict while running lambda
+- connection timeouts while deploying function
